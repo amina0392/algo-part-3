@@ -54,10 +54,19 @@
 
 <script type="text/javascript">
 
-    function analyze() {
-        // CODE HERE !
+function analyse() {
+    let maPhrase = document.getElementById("sentence").value;
+    let resultTab;
+    const length = maPhrase.length;
+    if (length < 5) {
+        resultTab = [length];
+        alert(resultTab);
     }
-
+    else {
+       resultTab = [maPhrase.length, maPhrase[4], maPhrase.slice(-0, +3), maPhrase.slice(-3)];
+       alert(resultTab);
+    }    
+}
 </script>
 </body>
 </html>
