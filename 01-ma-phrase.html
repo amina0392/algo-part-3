@@ -55,8 +55,16 @@
 <script type="text/javascript">
 function analyze() {
     let maPhrase = document.getElementById("sentence").value;
+    
+    // Déclarer une valeur non affectée
     let resultTab;
+
+    /*Déclarer une constance longueur "length" = longueur de la phrase 
+    saisie "maPhrase.length"*/
     const length = maPhrase.length;
+
+    /*Si la longueur "length" est inférieur à "5", le resultat du "resultTab" 
+    = à la longueur de la phrase saisie "maPhrase.length"*/
     if (length < 5) {
         resultTab = [length];
         alert(resultTab);

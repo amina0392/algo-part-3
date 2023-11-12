@@ -54,8 +54,25 @@
 <script type="text/javascript">
 
     function countWords() {
-        // CODE HERE ! 
+    let myPhrase = document.getElementById("sentence").value;
+    let compteur = 0;
+    let debutMot = false;
+
+    for (let i = 0; i < myPhrase.length; i++) {
+        if (myPhrase[i] != "" && myPhrase[i] != "'" && myPhrase[i] != "?" && myPhrase[i] != "!" ) {
+            if (debutMot == false) {
+                debutMot == true;
+            }
+        }
+        else if (debutMot == false) {
+                 compteur = compteur + 1;      
+        }
+             
+        }  
+        
     }
+    
+    
 
 </script>
 </body>
