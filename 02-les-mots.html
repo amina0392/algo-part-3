@@ -59,14 +59,14 @@
     let parcourirMot = false;
     let taille = maPhrase.length;
     for (let i = 0; i < taille; i++) {
-        // Pour chaque caractère de la phrase, on vérifie s'il ne s'agit pas d'un espace ou d'une ponctuation
+        // Pour chaque caractère de la phrase, on vérifie s'il ne s'agit pas d'un espace ou d'une ponctuation option :let caractere = maPhrase.charAt(i)
         let caractere = maPhrase[i];
-        if (caractere != " " && caractere != ";" && caractere != "." && caractere != "?" && caractere != "!") {
+        if (caractere != " " && caractere != ";" && caractere != "." && caractere != "?" && caractere != "!" && caractere != ",") {
             // Si c'est le cas, on note qu'on est entrain de parcourir un mot
             parcourirMot = true;
         }
         else {
-            // Si le caractère est un espace ou une ponctuation, on vérifie si on était en train un mot
+            // Si le caractère est un espace ou une ponctuation, on vérifie si on était en train d'écrire un mot
             if (parcourirMot) {
                 // Si c'est le cas, on considère qu'on est bien arrivé à la fin d'un mot, donc, on augmente notre compteur
                 compteur = compteur + 1;
@@ -81,12 +81,11 @@
             }
         }        
     }
-    return compteur;
+    console.log(compteur);
     }
     
-    console.log(countWords("Cest ma jolie phrase"));
-    console.log(countWords("C'est ma jolie phrase !"));
-    console.log(countWords("  56 ? C'est un  joli nombre !"));
+    
+    
 </script>
 </body>
 </html>
