@@ -88,11 +88,13 @@
      */
     function refreshAverage() {
     let nouvelleNote = document.getElementById("note").value;
+    // Condition qui demande à ce que le nombre saisi soit inferieur à 20
     if (nouvelleNote > 20) {
         console.log("Le nombre sasi est supérieur à 20");
         return (nouvelleNote);
     }
     else {
+    // Ajout du nombre saisi dans le tableau note
          notes.push(nouvelleNote);
     }
     }
